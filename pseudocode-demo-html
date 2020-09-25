@@ -162,6 +162,7 @@
 				<li>--<strong>POPULATE</strong> "div#main_headline" with new HTML content</li>
 
 				<li>--<strong>POPULATE</strong> "div#reload-me-container" with new HTML content</li>
+				div2.innerHTML = '<button id="reload-me" class="">Reload The Page</button>';
 
 				<li>--<strong>DELETE</strong> the "change headline" button</li>
 
@@ -185,17 +186,22 @@
 			<li>
 				<!-- when this button is clicked, the JS function "change_stuff()" is run. This function is in your "custom.js" file -->
 				<button id="change-me" type="button" class="" onclick="change_stuff();">
-					Change the Headline and Image
+				var element = document.getElementById('change-me');
+				element.parentNode.removeChild(element); 
+				var div2 = document.getElementById('reload-me-container');
+
 				</button>
 			</li>
+			
 		</ul>
 
 	</div><!-- main_container -->
 
 
 	<div id="secondary_container">
+	var element = document.getElementById('secondary_container');
+	element.parentNode.removeChild(element);
 
-		<h2>Let's explore our pseudocode from above:</h2>
 		<p>KEY: <strong>ACTION TO BE TAKEN</strong>&nbsp;&nbsp; <span class="highlight">&gt;&gt;</span> brief explanation of it</p>
 		<hr>
 		<ul class="pseudocode">
